@@ -1,36 +1,147 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+T# GrowEasy AI CSV Importer
 
-## Getting Started
+## Overview
 
-First, run the development server:
+GrowEasy AI CSV Importer is a full-stack AI-powered web application that enables users to upload CSV files, preview the data, and automatically extract structured CRM leads using the Groq LLM API. The application validates uploaded files, displays import summaries, and separates imported and skipped records for better data management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- Upload CSV files
+- Drag & Drop CSV upload
+- CSV Preview
+- AI-powered CRM field extraction
+- Import summary
+- Imported and skipped records table
+- Toast notifications
+- Responsive UI
+- Loading indicator during processing
+
+## Tech Stack
+
+
+### Frontend
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- React Hot Toast
+- PapaParse
+
+### Backend
+- Node.js
+- Express.js
+- Multer
+- Groq API (Llama 3.3 70B)
+
+## Requirements
+
+- Node.js 18+
+- npm
+- Groq API Key
+
+## Project Structure
+
+```
+groweasy-ai-importer/
+│
+├── frontend/
+│   ├── app/
+│   ├── components/
+│   ├── services/
+│   └── types/
+│
+└── backend/
+    ├── controllers/
+    ├── routes/
+    ├── services/
+    ├── utils/
+    └── server.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Clone Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/Himanee-001//groweasy-ai-importer.git
+```
 
-## Learn More
+### Frontend Setup
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Runs on:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+http://localhost:3000
+```
 
-## Deploy on Vercel
+### Backend Setup
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Runs on:
+
+```
+http://localhost:5000
+```
+
+## Environment Variables
+
+Create a `.env` file inside the backend folder.
+
+Example:
+
+```env
+GROQ_API_KEY=your_api_key
+PORT=5000
+```
+
+## API Endpoint
+
+```
+POST /upload/process
+```
+
+Accepts:
+
+- multipart/form-data
+- CSV file
+
+Returns:
+
+- Imported Records
+- Skipped Records
+- Summary
+
+## Screenshots
+
+(Add screenshots here after deployment)
+
+## Future Improvements
+
+- User Authentication
+- Database Integration
+- Export Processed Data
+- Duplicate Lead Detection
+- AI Prompt Customization
+- Dark Mode Support
+- Bulk File Upload
+
+## Author
+
+Himanee Mahajan
+
+Computer Engineering Student
+
+## License
+
+This project is developed for the GrowEasy AI Internship Assignment.

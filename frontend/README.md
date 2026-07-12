@@ -145,3 +145,17 @@ Computer Engineering Student
 ## License
 
 This project is developed for the GrowEasy AI Internship Assignment.
+
+## Live Demo
+
+Frontend:
+https://groweasy-ai-importer-pi.vercel.app
+
+Backend:
+https://groweasy-ai-importer-1-cggf.onrender.com
+
+
+## GitHub Repository
+
+https://github.com/Himanee-001/groweasy-ai-importer
+
